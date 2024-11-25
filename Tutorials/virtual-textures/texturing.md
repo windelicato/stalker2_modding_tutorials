@@ -13,13 +13,13 @@
 # Set up our project
 
 
-- Create a new project with the template `Games > Blank` and the following settings
+- Create a new project with the template __Games > Blank__ and the following settings
   - Blueprint
   - Target Platform: Desktop 
   - Quality Preset: Maximum
   - Starter Content: [ ] (unchecked)
   - Raytracing: [ ] (unchecked)
-  - Name the project `Stalker2`
+  - Name the project __Stalker2__
     - If anyone knows a way around this lmk this is the only way my packages had the correct mount point
 
 ![Alt text](img/newproject.png?raw=true "img")
@@ -27,34 +27,34 @@
 
 # Set up our options
 
-- Click the `Platforms` button and go to `Packaging Settings`
+- Click the __Platforms__ button and go to __Packaging Settings__
 
 ![Alt text](img/settings.png?raw=true "img")
 
 
-  - Enable `Use Pak File` [X]
-  - Enable `Use Io Store` [X]
-  - Enable `Generate Chunks` [X]
+  - Enable __Use Pak File__ [X]
+  - Enable __Use Io Store__ [X]
+  - Enable __Generate Chunks__ [X]
 
 
 ![Alt text](img/settingspackaging1.png?raw=true "img")
     
 
 - Search for "cook"
-    - Enable `Cook everything in the project content directory` [x]
+    - Enable __Cook everything in the project content directory__ [x]
 
 ![Alt text](img/settingspackaging2.png?raw=true "img")
 
 # Virtual Texturing
-- Click on `Edit` and go to `Project Settings`
+- Click on __Edit__ and go to __Project Settings__
 - Search for "virtual"
 - Scroll down and enable the following 
-    - Enable `Enable virtual texture support` [x]
+    - Enable __Enable virtual texture support__ [x]
 
 - And then optionally if the textures you're replacing include these, enable them:
-    - Enable `Enable virtual texture lightmaps` [x]
-    - Enable `Enable virtual texture anistropic filtering` [x]
-    - Enable `Enable virtual textures for Opacity Mask` [x]
+    - Enable __Enable virtual texture lightmaps__ [x]
+    - Enable __Enable virtual texture anistropic filtering__ [x]
+    - Enable __Enable virtual textures for Opacity Mask__ [x]
 
 
 ![Alt text](img/virtualenable.png?raw=true "img")
@@ -81,13 +81,13 @@
      
           
    - Diffuse texture
-    - `PixelFormat` is DXT1 and there is no `CompressionSetting` so this is a "Default" texture
+    - __PixelFormat__ is DXT1 and there is no __CompressionSetting__ so this is a "Default" texture
         
 ![Alt text](img/diffuse-check.png?raw=true "img")
 
 
    - Normal texture
-    - `PixelFormat` is DXT5 and `CompressionSetting` is `TC_Normal` so this is a "Normal" texture
+    - __PixelFormat__ is DXT5 and __CompressionSetting__ is __TC_Normal__ so this is a "Normal" texture
 
         
 ![Alt text](img/normal-check.png?raw=true "img")
@@ -97,7 +97,7 @@
 
 
    - RHO (roughness, height, opacity) or other maps:
-    - `PixelFormat` is DXT1 and `CompressionSetting` is `TC_Masks` so this is a "Masks" texture
+    - __PixelFormat__ is DXT1 and __CompressionSetting__ is __TC_Masks__ so this is a "Masks" texture
 
               
 ![Alt text](img/rho-check.png?raw=true "img")
@@ -107,8 +107,8 @@
 
 # Convert to virtual textures
 - Once you've set up all the textures with compression settings, it's time to make our virtual textures
-    - Select every texture that had `VirtualTextureStreaming: true`
-    - Right click > `Convert To Virtual Texture`
+    - Select every texture that had __VirtualTextureStreaming: true__
+    - Right click > __Convert To Virtual Texture__
         
 ![Alt text](img/converttovirtual.png?raw=true "img")
 
@@ -123,23 +123,23 @@
 
 
 # Create asset label
-- Back in the `Content` folder, right click and create a new data asset
+- Back in the __Content__ folder, right click and create a new data asset
   
 ![Alt text](img/assetlabelselect.png?raw=true "img")
 
-   - Select `Primary Asset Label`
+   - Select __Primary Asset Label__
 
 ![Alt text](img/assetlabeltype.png?raw=true "img")
 
-  - Name it `Label_YOURMODNAME`
+  - Name it __Label_YOURMODNAME__
     
 ![Alt text](img/assetlabelname.png?raw=true "img")
 
    - Set the following:
-     - `Priority`: 1 or higher
-     - `Chunk ID`: 1000 or higher, this needs to be unique to your mod so don't pick 1420 cuz its already taken
-     - `Cook Rule`: `Always cook`
-     - `Label Assets in my directory`: [x] (CHECKED)
+     - __Priority__: 1 or higher
+     - __Chunk ID__: 1000 or higher, this needs to be unique to your mod so don't pick 1420 cuz its already taken
+     - __Cook Rule__: __Always cook__
+     - __Label Assets in my directory__: [x] (CHECKED)
     
 ![Alt text](img/assetlabelsettings.png?raw=true "img")
 
@@ -148,14 +148,14 @@
 # HIT SAVE ALL
 
 # Package it up
-- Click `Platforms` > `Windows` > `Shipping`
-- Click `Platforms` > `Windows` > `Package Project`
+- Click __Platforms__ > __Windows__ > __Shipping__
+- Click __Platforms__ > __Windows__ > __Package Project__
         
 ![Alt text](img/packageit.png?raw=true "img")
 
 
 
-- Pick a directory for your generated package, I make a `Build` directory with subdirectories for unique builds
+- Pick a directory for your generated package, I make a __Build__ directory with subdirectories for unique builds
 - *This will take a long time* 
 
 # Yep still packaging
@@ -171,13 +171,13 @@
         
 ![Alt text](img/packagerename1.png?raw=true "img")
 
-- Rename them all something like `z_YourMod_P`
+- Rename them all something like __z_YourMod_P__
 - *make sure it ends in _P *
           
 ![Alt text](img/packagerename2.png?raw=true "img")
 
 
-- Place all 3 files in your `~mods/` directory
+- Place all 3 files in your __~mods/__ directory
 
 - Open FModel and confirm your structure matches the game and your asset is replaced. if not cry or check your project name
 
